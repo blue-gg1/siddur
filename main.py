@@ -1,13 +1,8 @@
 import os
 
 def LoadJsonFromFile():
-    RawJson = open(str(os.getcwd())+"""/Text/Tanach with Taamei Hamikra.json""")
-    print(RawJson)
-
-
-
-
-
+    with open(str(os.getcwd())+"/Text/TanachPublicDomain.json") as RawJson:
+        print(RawJson.read())
 
 
 
