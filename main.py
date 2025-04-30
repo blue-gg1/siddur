@@ -1,9 +1,10 @@
-import os
+import os, json
+from pandas import *
 
 def LoadJsonFromFile():
-    with open(str(os.getcwd())+"/Text/TanachPublicDomain.json") as RawJson:
-        print(RawJson.read())
-
+    RawJson = open(str(os.getcwd())+"/Text/TanachPublicDomain.json")
+    BetterJson = json.dumps(RawJson)
+    print(BetterJson)
 
 
 
