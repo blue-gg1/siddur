@@ -12,7 +12,7 @@ def main():
 
 def Testing():
     # print(str(RawJson.read()))
-    item_dict = json.loads(str(RawJson.read))
+    item_dict = json.loads(str(RawJson.read()))
     print(item_dict)
     print (len(item_dict['text'][0]['sectionNames']))
 
