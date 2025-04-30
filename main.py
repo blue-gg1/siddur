@@ -4,15 +4,17 @@ import pandas as pd
 
 def LoadJsonFromFile():
     global RawJson
-    RawJson = open(str(os.getcwd())+"/Text/TanachPublicDomain.json")
+    RawJson = open(str(os.getcwd())+"/Text/TanachPublicDomain.json", "r")
 
 def main():
     print("starting")
 
 
 def Testing():
-    item_dict = json.loads(RawJson)
-    print (len(item_dict['result'][0]['run']))
+    # print(str(RawJson.read()))
+    item_dict = json.loads(str(RawJson.read))
+    print(item_dict)
+    print (len(item_dict['text'][0]['sectionNames']))
 
 
 
