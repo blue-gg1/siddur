@@ -6,28 +6,25 @@ def LoadJsonFromFile():
     global RawJson
     RawJson = open(str(os.getcwd())+"/Text/TanachPublicDomain.json", "r")
 
-def PrintChaperByNumber(Kapitel):
+def PrintChaperByNumber(KapitelNumber):
+    print(KapitelNumber)
+    global KapitelList
     LoadJsonFromFile()
-    item_dict = json.loads(str(RawJson.read()))
-    print(item_dict['text'][Kapitel])
-
-
-def main():
-    print("starting")
+    KapitelList = json.loads(str(RawJson.read()))
+    print(KapitelList['text'][KapitelNumber])
 
 
 def Testing():
-    # print(str(RawJson.read()))
-    item_dict = json.loads(str(RawJson.read()))
-    # print(item_dict)
-    print(item_dict['text'][119])
-    # print (len(item_dict['text'][0]['sectionNames']))
+    PrintChaperByNumber(1)
+    # print(KapitelList)
+    pass
 
 
 
+def main():
+    pass
 
-PrintChaperByNumber(119)
 
 # main()
 # LoadJsonFromFile()
-# Testing()
+Testing()
